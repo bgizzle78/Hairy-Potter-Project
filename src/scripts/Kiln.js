@@ -12,6 +12,15 @@
 // After both of the new properties have been added, return the augmented object.
 
 
-export firePottery = (potteryObject, 2200) => {
+export const firePottery = (potteryObject, kilnTemp) => {
+    potteryObject.fired = true
 
+    if (kilnTemp > 2200) {
+        potteryObject.cracked = true
+    }
+    else {
+        potteryObject.cracked = false
+    }
+    return potteryObject
 }
+

@@ -11,15 +11,16 @@
 // height
 // id(increment this value each time the function is invoked)
 
-const potteryPiece = 1
+let potteryPiece = 1
 
 export const makePottery = (shape, weight, height) => {
     let potteryObject = {
         shape: shape,
         weight: weight,
         height: height,
-        id: 1
+        id: potteryPiece
     }
+    potteryPiece++
 
 return potteryObject
 }
